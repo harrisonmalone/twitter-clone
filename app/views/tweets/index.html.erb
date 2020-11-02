@@ -3,7 +3,7 @@
 <ul class="tweets">
   <% @tweets.each do |tweet| %>
     <li>
-      <%= tweet.body %> | <%= tweet.created_at %>
+      <%= tweet.body %> | <%= tweet.created_at.strftime("%Y/%m/%d") %>
     </li>
   <% end %>
 </ul>
