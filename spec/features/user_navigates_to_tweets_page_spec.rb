@@ -14,4 +14,7 @@ RSpec.feature "on index page" do
     click_on "New Tweet"
     expect(page).to have_current_path(new_tweet_path)
   end
+  scenario "user can see the tweet with sup text" do 
+    expect(page).to have_css("li", text: "sup")
+  end
 end
