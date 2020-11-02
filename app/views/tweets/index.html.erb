@@ -1,6 +1,6 @@
 <h1>Tweets</h1>
 <%= link_to "New Tweet", new_tweet_path %>
-<ul class="tweets-1">
+<ul class="tweets">
   <% @tweets.each do |tweet| %>
     <li>
       <%= tweet.body %> | <%= tweet.created_at.strftime("%Y/%m/%d") %>
