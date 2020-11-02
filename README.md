@@ -1,5 +1,21 @@
 # Twitter Clone
 
+## Setup
+
+- User stories
+  - As a user can go to index page to see all tweets
+  - As a user can go to new tweet page to fill out form and create a new tweet
+  - As a user can delete own tweets
+  - As a user can favorite tweets
+  - As a user you can upload images in a tweet
+  - As a user you can search for tweets via clicking on hashtags 
+- ERD
+  - Entities: tweets, users
+  - Tweets: body user_id time_stamps 
+  - Users: email password username (generated via devise)
+- Wireframes, balsamiq
+- Trello board, tickets on a trello board to complete
+
 ## Why do testing?
 
 1. Monetary reasons
