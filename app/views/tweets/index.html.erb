@@ -4,7 +4,13 @@
   <% @tweets.each do |tweet| %>
     <div class="tweet">
       <div class="avatar-container">
-        <div class="avatar"></div>
+        <% if tweet.user.avatar.attached? %>
+          <div class="avatar">
+            <%= image_tag tweet.user.avatar, class: "profile" %>
+          </div>
+        <% else %>
+          <div class="placeholder"></div>
+        <% end %>
       </div>
       <div class="tweet-body">
         <p class="tweet-metadata">
@@ -13,6 +19,11 @@
         <p class="tweet-content">
           <%= tweet.body %>
         </p>
+        <% if tweet.image.attached? %>
+          <div class="image-container">
+            <%= image_tag tweet.image, class: "image" %>
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>

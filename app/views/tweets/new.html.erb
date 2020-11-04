@@ -15,7 +15,13 @@
 <% end %>
 
 <%= form_with model: @tweet, local: true do |f| %>
-  <%= f.label :body %>
-  <%= f.text_area :body %>
+  <div>  
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+  <div>  
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
   <%= f.submit %>
 <% end %>
