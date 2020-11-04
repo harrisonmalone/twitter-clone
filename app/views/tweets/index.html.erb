@@ -1,9 +1,19 @@
-<h1>Tweets</h1>
-<%= link_to "New Tweet", new_tweet_path %>
-<ul class="tweets">
+<h1>Home</h1>
+<hr>
+<main class="tweets">
   <% @tweets.each do |tweet| %>
-    <li>
-      <%= tweet.body %> | <%= tweet.created_at.strftime("%Y/%m/%d") %>
-    </li>
+    <div class="tweet">
+      <div class="avatar-container">
+        <div class="avatar"></div>
+      </div>
+      <div class="tweet-body">
+        <p class="tweet-metadata">
+          <%= tweet.user.name %> <span class="handle">@<%= tweet.user.handle + " " %></span><span class="date"><%= tweet.created_at.strftime("%Y/%m/%d") %></span>
+        </p>
+        <p class="tweet-content">
+          <%= tweet.body %>
+        </p>
+      </div>
+    </div>
   <% end %>
-</ul>
+</main>

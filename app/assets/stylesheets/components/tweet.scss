@@ -1,0 +1,31 @@
+.tweet {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  .avatar-container {
+    width: 20%;
+    .avatar {
+      height: 40px;
+      width: 40px;
+      background: red;
+      border-radius: 50%;
+    }
+  }
+  .tweet-body {
+    width: 80%;
+    .tweet-content {
+      margin: 7px 0px;
+    }
+    .tweet-metadata {
+      margin: 7px 0px;
+      .handle {
+        color: gray;
+        font-size: 12px;
+      }
+      .date {
+        font-size: 10px;
+      }
+    }
+  } 
+}
